@@ -6,26 +6,59 @@
 <title>NAJIYA ROYAL TENT HOUSE</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#f5f6fa;color:#17233b}
-header,footer{background:#071b49;color:white;text-align:center;padding:22px}
-header h1,footer strong{color:#f4c65e}
-nav{background:#102b60;padding:12px;text-align:center}
-nav a{color:white;text-decoration:none;margin:8px;display:inline-block}
-.hero{text-align:center;padding:50px 15px;background:linear-gradient(130deg,#071b49,#24558c);color:white}
-.hero h2{color:#f4c65e;font-size:30px}
-section{max-width:1050px;margin:auto;padding:25px 15px}
-.heading{text-align:center;color:#102b60}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
-.card,form,.panel{background:white;padding:17px;border-radius:12px;box-shadow:0 3px 12px #0001}
-.card img{width:100%;height:150px;object-fit:cover;border-radius:8px}
-.card h3{color:#17396c}
-input,select,textarea{width:100%;padding:12px;margin:7px 0 14px;border:1px solid #ccd2df;border-radius:7px;font-size:15px}
-label{font-weight:bold}
-.btn{display:inline-block;background:#e6b94f;color:#102044;border:0;border-radius:7px;padding:12px 17px;font-weight:bold;text-decoration:none;cursor:pointer;margin:5px}
-.notice{background:#fff5d9;padding:14px;border-left:4px solid #d5a32c;line-height:1.7}
+:root{--navy:#102b60;--deep:#071b49;--gold:#e8bd50;--gold-dark:#c99b2e;--bg:#f3f5fa;--ink:#202b40;--muted:#748096}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink);font-size:18px;line-height:1.6}
+header,footer{background:linear-gradient(135deg,#071b49,#173d78);color:white;text-align:center;padding:30px 18px}
+header{position:relative;overflow:hidden;border-bottom:4px solid var(--gold)}
+header h1{color:#f5cf6b;font-size:clamp(27px,5vw,38px);margin:0 0 8px;letter-spacing:.5px;text-shadow:0 2px 10px #0003}
+header p{margin:0;font-size:18px;color:#f4f6ff}
+footer{line-height:1.9;font-size:16px}footer strong{color:#f5cf6b;font-size:20px}
+nav{background:#102b60;padding:12px 8px;text-align:center;position:sticky;top:0;z-index:10;box-shadow:0 4px 12px #071b4930}
+nav a{color:white;text-decoration:none;margin:5px 9px;display:inline-block;font-weight:700;font-size:15px;padding:6px 10px;border-radius:20px;transition:.2s}
+nav a:hover{background:#ffffff20;color:#f5cf6b}
+.hero{position:relative;isolation:isolate;overflow:hidden;text-align:center;padding:76px 16px 70px;background:radial-gradient(circle at 85% 15%,#4773a8 0,transparent 28%),linear-gradient(130deg,#071b49,#24558c 72%,#173d78);color:white}
+.hero:before,.hero:after{content:"";position:absolute;z-index:-1;border:1px solid #ffffff20;border-radius:50%;width:260px;height:260px;right:-100px;top:-125px}
+.hero:after{width:180px;height:180px;right:auto;left:-85px;top:auto;bottom:-110px}
+.hero-kicker{display:inline-block!important;margin:0 auto 15px!important;padding:5px 15px;border:1px solid #f4c65e80;border-radius:30px;color:#f5cf6b!important;font-size:13px!important;letter-spacing:2px;font-weight:800}
+.hero h2{color:#f4c65e;font-size:clamp(31px,5.5vw,46px);line-height:1.2;margin:0 auto 16px;max-width:850px;text-shadow:0 3px 14px #0003}
+.hero p{font-size:19px;max-width:760px;margin:0 auto 25px;color:#f7f8ff}
+section{max-width:1050px;margin:auto;padding:42px 15px}
+.heading{text-align:center;color:#102b60;font-size:clamp(29px,5vw,40px);line-height:1.3;margin:0 0 28px;font-weight:800}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card,form,.panel{background:#fff;padding:22px;border-radius:20px;box-shadow:0 8px 25px #102b6010;border:1px solid #edf0f5}
+.card{transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 13px 30px #102b6018}
+.card img{width:100%;height:175px;object-fit:cover;border-radius:12px}
+.card h3{color:#17396c;font-size:23px;line-height:1.35;margin:15px 0 10px}
+.card p{font-size:18px}
+input,select,textarea{width:100%;padding:15px 16px;margin:8px 0 17px;border:1.5px solid #cbd1dc;border-radius:12px;font-size:18px;background:#fff;color:#202b40}
+input:focus,select:focus,textarea:focus{outline:2px solid #e8bd5070;border-color:#c99b2e}
+label{font-weight:700;font-size:19px;color:#26334b}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(135deg,#f1cc69,#dfb344);color:#102044;border:0;border-radius:13px;padding:14px 22px;font-weight:800;font-size:18px;text-decoration:none;cursor:pointer;margin:6px 5px 6px 0;box-shadow:0 5px 13px #b58a2b2b;transition:transform .18s,filter .18s,box-shadow .18s}
+.btn:hover{filter:brightness(1.04);transform:translateY(-2px);box-shadow:0 8px 18px #b58a2b38}
+.btn svg{width:21px;height:21px;flex:0 0 21px;display:block}
+.btn-whatsapp{background:linear-gradient(135deg,#25d366,#16a34a);color:#fff;box-shadow:0 5px 13px #16a34a30}
+.btn-call{background:linear-gradient(135deg,#173d78,#102b60);color:white;box-shadow:0 5px 13px #102b6030}
+.btn-sms{background:linear-gradient(135deg,#eaf0fb,#dce6f6);color:#17396c;border:1px solid #cbd8eb;box-shadow:none}
+.notice{background:#fff5d9;padding:18px;border-left:6px solid #d5a32c;border-radius:0 12px 12px 0;line-height:1.75;font-size:18px;color:#27334a}
 .hidden{display:none}
-.booking{border:1px solid #ddd;padding:12px;margin:10px 0;border-radius:8px}
-.small{font-size:13px;color:#68748b}
+.booking{border:1px solid #e4e8ef;padding:16px;margin:12px 0;border-radius:13px;background:#fbfcff;line-height:1.8}
+.small{font-size:14px;color:#68748b}
+@media(max-width:600px){
+body{font-size:17px}
+header,footer{padding:24px 14px}
+nav{padding:8px 4px}
+nav a{font-size:13px;margin:3px 4px;padding:4px 7px}
+.hero{padding:55px 14px 50px}
+.hero p{font-size:17px}
+section{padding:32px 14px}
+.card,form,.panel{padding:18px;border-radius:18px}
+.card img{height:155px}
+.btn{font-size:16px;padding:13px 16px}
+input,select,textarea{font-size:17px;padding:14px}
+.notice{font-size:17px}
+}
 </style>
 </head>
 <body>
@@ -45,10 +78,19 @@ label{font-weight:bold}
 </nav>
 
 <div class="hero" id="home">
+<p class="hero-kicker">✦ NAJIYA ROYAL ✦</p>
 <h2>Your Celebration, Our Decoration</h2>
 <p>शादी, पार्टी, टेंट, बर्तन, घर की सजावट, DJ और लाइटिंग की बुकिंग करें।</p>
-<a class="btn" href="#booking">अभी बुकिंग करें</a>
-<a class="btn" href="https://wa.me/917043551103">WhatsApp करें</a>
+
+<a class="btn" href="#booking">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5ZM8 12v1.7h8V12Zm0 4v1.7h8V16Z"/></svg>
+अभी बुकिंग करें
+</a>
+
+<a class="btn btn-whatsapp" href="https://wa.me/917043551103">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 2 17.7L.5 23.5l6-1.6A11.8 11.8 0 0 0 20.5 3.5ZM12 21a9.7 9.7 0 0 1-4.9-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.7 9.7 0 1 1 12 21Zm5.3-7.3c-.3-.2-1.7-.9-2-.9s-.5-.2-.7.2-.8.9-1 1.1-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.5.2-.5c.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.3 1 2.6 1.1 2.8a11 11 0 0 0 4.3 4.1c.6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4s-.2-.2-.5-.4Z"/></svg>
+WhatsApp करें
+</a>
 </div>
 
 <section id="categories">
@@ -59,28 +101,40 @@ label{font-weight:bold}
 <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600" alt="Tent decoration">
 <h3>1. Tent House & Decoration</h3>
 <p>शामियाना, वाटरप्रूफ तिरपाल, पर्दे, कनात, कुर्सी, टेबल, कारपेट, दरी, पंखे और लाइटिंग।</p>
-<button class="btn" onclick="choose('Tent House & Decoration')">बुक करें</button>
+<button class="btn" onclick="choose('Tent House & Decoration')">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5ZM8 12v1.7h8V12Zm0 4v1.7h8V16Z"/></svg>
+बुक करें
+</button>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1515003197210-e0cd7184f8b5?w=600" alt="Catering">
 <h3>2. Bartan & Catering Equipment</h3>
 <p>थाली, प्लेट, कटोरी, गिलास, चम्मच, ट्रे, जग, देग, भगोना, कड़ाही और गैस चूल्हा।</p>
-<button class="btn" onclick="choose('Bartan & Catering Equipment')">बुक करें</button>
+<button class="btn" onclick="choose('Bartan & Catering Equipment')">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5ZM8 12v1.7h8V12Zm0 4v1.7h8V16Z"/></svg>
+बुक करें
+</button>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600" alt="Wedding decoration">
 <h3>3. Wedding Home Decoration</h3>
 <p>गेट, दरवाजा, कमरा, बेड, फूलों की सजावट, झालर, फेयरी लाइट और वेलकम बोर्ड।</p>
-<button class="btn" onclick="choose('Wedding Home Decoration')">बुक करें</button>
+<button class="btn" onclick="choose('Wedding Home Decoration')">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5ZM8 12v1.7h8V12Zm0 4v1.7h8V16Z"/></svg>
+बुक करें
+</button>
 </div>
 
 <div class="card">
 <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=600" alt="DJ lights">
 <h3>4. DJ, Generator & Lighting</h3>
 <p>DJ, स्पीकर, मिक्सर, माइक, स्टेज लाइट, लेजर लाइट, जनरेटर और बैकअप उपकरण।</p>
-<button class="btn" onclick="choose('DJ, Generator & Lighting')">बुक करें</button>
+<button class="btn" onclick="choose('DJ, Generator & Lighting')">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5ZM8 12v1.7h8V12Zm0 4v1.7h8V16Z"/></svg>
+बुक करें
+</button>
 </div>
 
 </div>
@@ -89,6 +143,7 @@ label{font-weight:bold}
 <section id="booking">
 <h2 class="heading">ऑनलाइन बुकिंग फॉर्म</h2>
 <form id="bookingForm">
+
 <label>आपका नाम</label>
 <input id="name" required placeholder="पूरा नाम">
 
@@ -123,8 +178,13 @@ label{font-weight:bold}
 <input id="total" type="number" min="1" required placeholder="कुल कीमत">
 
 <div class="notice" id="calculation">20% एडवांस और 80% बाकी रकम यहाँ दिखाई जाएगी।</div>
-<button class="btn" type="submit">बुकिंग जमा करें</button>
+
+<button class="btn" type="submit">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 2h9l5 5v15H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm8 1.5V8h4.5ZM8 12v1.7h8V12Zm0 4v1.7h8V16Z"/></svg>
+बुकिंग जमा करें
+</button>
 </form>
+
 <div id="bookingResult"></div>
 <p class="small">बुकिंग के बाद WhatsApp खुलेगा। मैसेज भेजने के लिए Send दबाना होगा।</p>
 </section>
@@ -167,9 +227,21 @@ label{font-weight:bold}
 <p><b>Owner: NUREALAM</b></p>
 <p>Gaura Pipra Semrahna, Mihipurwa, Bahraich, Uttar Pradesh, India</p>
 <p>Phone: +91 7043551103</p>
-<a class="btn" href="tel:+917043551103">कॉल करें</a>
-<a class="btn" href="sms:+917043551103">SMS करें</a>
-<a class="btn" href="https://wa.me/917043551103">WhatsApp करें</a>
+
+<a class="btn btn-call" href="tel:+917043551103">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.2 11 11 0 0 0 3.4.5 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17.8 17.8 0 0 1 3 4.2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11 11 0 0 0 .5 3.4 1 1 0 0 1-.2 1Z"/></svg>
+कॉल करें
+</a>
+
+<a class="btn btn-sms" href="sms:+917043551103">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 4h18a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Zm9 8 8-5H4Z"/></svg>
+SMS करें
+</a>
+
+<a class="btn btn-whatsapp" href="https://wa.me/917043551103">
+<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11.8 11.8 0 0 0 2 17.7L.5 23.5l6-1.6A11.8 11.8 0 0 0 20.5 3.5ZM12 21a9.7 9.7 0 0 1-4.9-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.7 9.7 0 1 1 12 21Zm5.3-7.3c-.3-.2-1.7-.9-2-.9s-.5-.2-.7.2-.8.9-1 1.1-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.5.2-.5c.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.3 1 2.6 1.1 2.8a11 11 0 0 0 4.3 4.1c.6.3 1.1.5 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4s-.2-.2-.5-.4Z"/></svg>
+WhatsApp करें
+</a>
 </div>
 </section>
 
@@ -190,6 +262,7 @@ label{font-weight:bold}
 <label>Admin Password</label>
 <input id="adminPassword" type="password" placeholder="Password">
 <button class="btn" onclick="adminLogin()">Login</button>
+
 <div id="adminPanel" class="hidden">
 <h3>सभी बुकिंग</h3>
 <button class="btn" onclick="showBookings()">बुकिंग देखें</button>
@@ -215,38 +288,50 @@ function getBookings(){
 try{return JSON.parse(localStorage.getItem(KEY)||"[]")}
 catch(e){return []}
 }
+
 function saveBookings(data){
 localStorage.setItem(KEY,JSON.stringify(data));
 }
+
 function choose(category){
 document.getElementById("category").value=category;
 location.hash="booking";
 }
+
 function calculate(){
 let total=Number(document.getElementById("total").value)||0;
 let advance=Math.ceil(total*.20);
 let balance=total-advance;
+
 document.getElementById("calculation").innerHTML=
 "कुल कीमत: ₹"+total.toLocaleString("en-IN")+
 "<br>20% एडवांस: ₹"+advance.toLocaleString("en-IN")+
 "<br>80% बाकी: ₹"+balance.toLocaleString("en-IN");
 }
+
 document.getElementById("total").addEventListener("input",calculate);
 
 document.getElementById("bookingForm").addEventListener("submit",function(e){
 e.preventDefault();
+
 let date=document.getElementById("eventDate").value;
 let today=new Date();
 today.setHours(0,0,0,0);
 let eventDay=new Date(date+"T00:00:00");
+
 if(eventDay<today){
 alert("कृपया भविष्य की तारीख चुनें।");
 return;
 }
+
 let total=Number(document.getElementById("total").value);
-if(total<=0){alert("सही कीमत डालें।");return;}
+if(total<=0){
+alert("सही कीमत डालें।");
+return;
+}
 
 let advance=Math.ceil(total*.20);
+
 let booking={
 id:"NRTH-"+Date.now(),
 name:document.getElementById("name").value,
@@ -268,21 +353,15 @@ data.push(booking);
 saveBookings(data);
 
 document.getElementById("bookingResult").innerHTML=
-"<div class='notice'>बुकिंग सेव हो गई। Booking ID: <b>"+
-booking.id+"</b><br>एडवांस: ₹"+advance+
-" | बाकी: ₹"+booking.balance+"</div>";
+"<div class='notice'>बुकिंग सेव हो गई। Booking ID: <b>"+booking.id+
+"</b><br>एडवांस: ₹"+advance+" | बाकी: ₹"+booking.balance+"</div>";
 
 let msg="New Booking - NAJIYA ROYAL TENT HOUSE\n"+
-"Booking ID: "+booking.id+
-"\nName: "+booking.name+
-"\nPhone: "+booking.phone+
-"\nCategory: "+booking.category+
-"\nDate: "+booking.date+
-"\nTime: "+booking.time+
-"\nAddress: "+booking.location+
-"\nItems: "+booking.items+
-"\nTotal: Rs "+booking.total+
-"\nAdvance 20%: Rs "+booking.advance+
+"Booking ID: "+booking.id+"\nName: "+booking.name+
+"\nPhone: "+booking.phone+"\nCategory: "+booking.category+
+"\nDate: "+booking.date+"\nTime: "+booking.time+
+"\nAddress: "+booking.location+"\nItems: "+booking.items+
+"\nTotal: Rs "+booking.total+"\nAdvance 20%: Rs "+booking.advance+
 "\nBalance 80%: Rs "+booking.balance;
 
 window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg),"_blank");
@@ -292,9 +371,14 @@ calculate();
 
 function safe(v){
 return String(v||"").replace(/[&<>"']/g,c=>({
-"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+"&":"&amp;",
+"<":"&lt;",
+">":"&gt;",
+'"':"&quot;",
+"'":"&#39;"
 }[c]));
 }
+
 function bookingHTML(b){
 return "<div class='booking'><b>"+safe(b.id)+"</b>"+
 "<br>नाम: "+safe(b.name)+
@@ -305,81 +389,115 @@ return "<div class='booking'><b>"+safe(b.id)+"</b>"+
 "<br>बाकी: ₹"+b.balance+
 "<br>स्टेटस: <b>"+safe(b.status)+"</b></div>";
 }
+
 function findBooking(){
 let phone=document.getElementById("searchPhone").value.trim();
 let found=getBookings().filter(b=>b.phone===phone||b.whatsapp===phone);
 let out=document.getElementById("myResult");
+
 if(!found.length){
 out.innerHTML="<p>इस नंबर से कोई बुकिंग नहीं मिली।</p>";
 return;
 }
+
 out.innerHTML=found.map(bookingHTML).join("");
 }
+
 function cancelBooking(){
 let id=document.getElementById("cancelId").value.trim();
 let data=getBookings();
 let index=data.findIndex(b=>b.id===id);
 let out=document.getElementById("cancelResult");
-if(index<0){out.innerHTML="बुकिंग ID नहीं मिली।";return;}
+
+if(index<0){
+out.innerHTML="बुकिंग ID नहीं मिली।";
+return;
+}
+
 let today=new Date();
 today.setHours(0,0,0,0);
 let eventDay=new Date(data[index].date+"T00:00:00");
 let days=Math.floor((eventDay-today)/86400000);
+
 if(days<5){
 out.innerHTML="कैंसिलेशन केवल कार्यक्रम से कम-से-कम 5 दिन पहले किया जा सकता है।";
 return;
 }
+
 data[index].status="Cancellation Requested";
 saveBookings(data);
+
 out.innerHTML="कैंसिलेशन अनुरोध दर्ज हो गया।";
+
 let msg="Cancellation request\nBooking ID: "+id+
 "\nCustomer: "+data[index].name+
 "\nEvent Date: "+data[index].date;
+
 window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg),"_blank");
 }
+
 function adminLogin(){
 if(document.getElementById("adminPassword").value!=="NRT2026"){
 alert("गलत पासवर्ड");
 return;
 }
+
 document.getElementById("adminPanel").classList.remove("hidden");
 showBookings();
 }
+
 function showBookings(){
 let data=getBookings();
+
 document.getElementById("allBookings").innerHTML=data.length?
 data.map((b,i)=>bookingHTML(b)+
 "<button class='btn' onclick='changeStatus("+i+")'>स्टेटस बदलें</button>").join("")
 :"अभी कोई बुकिंग नहीं है।";
 }
+
 function changeStatus(i){
 let data=getBookings();
 let status=prompt("नया स्टेटस लिखें: Pending / Confirmed / Completed / Cancelled",data[i].status);
+
 if(status){
 data[i].status=status;
 saveBookings(data);
 showBookings();
 }
 }
+
 function exportCSV(){
 let data=getBookings();
-if(!data.length){alert("कोई बुकिंग नहीं है");return;}
+
+if(!data.length){
+alert("कोई बुकिंग नहीं है");
+return;
+}
+
 let rows=[["ID","Name","Phone","Category","Date","Total","Advance","Balance","Status"]];
-data.forEach(b=>rows.push([b.id,b.name,b.phone,b.category,b.date,b.total,b.advance,b.balance,b.status]));
+
+data.forEach(b=>rows.push([
+b.id,b.name,b.phone,b.category,b.date,b.total,b.advance,b.balance,b.status
+]));
+
 let csv=rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(",")).join("\n");
+
 let a=document.createElement("a");
 a.href=URL.createObjectURL(new Blob(["\ufeff"+csv],{type:"text/csv"}));
 a.download="najiya-bookings.csv";
 a.click();
 URL.revokeObjectURL(a.href);
 }
+
 document.getElementById("photoInput").addEventListener("change",function(){
 let file=this.files[0];
 if(!file)return;
+
 let img=document.getElementById("preview");
 img.src=URL.createObjectURL(file);
 img.classList.remove("hidden");
 });
 </script>
+
 </body>
 </html>
