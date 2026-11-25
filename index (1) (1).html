@@ -1,0 +1,477 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NAJIYA ROYAL TENT HOUSE</title>
+<meta name="description" content="Tent House, Wedding Decoration, Catering, DJ and Generator Booking">
+<style>
+:root{--navy:#06183d;--blue:#0b3479;--gold:#f7c744;--light:#f3f6ff;--green:#08b957}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:var(--light);color:#142448}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+.topbar{background:#03112e;color:white;text-align:center;padding:9px;font-size:13px;line-height:1.8;border-bottom:2px solid var(--gold)}
+.topbar a{color:#ffe69a;font-weight:bold}
+header{text-align:center;padding:18px 10px;background:linear-gradient(120deg,#03112d,#0b3479,#03112d);color:white;border-bottom:4px solid var(--gold)}
+.crown{font-size:35px}
+.brand{font-family:Georgia,serif;color:var(--gold);font-size:clamp(25px,5vw,45px);font-weight:900;text-shadow:0 3px 8px #000}
+.tagline{font-size:clamp(16px,3vw,23px);font-weight:bold;margin-top:6px}
+.owner{color:#ffe69a;font-weight:bold;margin-top:7px}
+nav{position:sticky;top:0;z-index:50;background:#061a42;border-bottom:3px solid var(--gold);display:flex;justify-content:center;gap:4px;flex-wrap:wrap;padding:8px;box-shadow:0 4px 12px #0003}
+nav a{color:white;padding:10px 13px;border-radius:25px;font-size:13px;font-weight:bold}
+nav a:hover,nav a.active{background:var(--gold);color:#071a40}
+.hero{min-height:365px;background:linear-gradient(90deg,#041634ed,#041634a8 48%,#04163422),url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1800&q=85") center/cover;display:flex;align-items:center;padding:40px 7%;color:white;border-bottom:5px solid var(--gold)}
+.hero-content{max-width:650px}
+.hero-label{display:inline-block;background:var(--gold);color:#06183d;padding:9px 16px;border-radius:30px;font-weight:bold;margin-bottom:16px}
+.hero h1{font-family:Georgia,serif;font-size:clamp(36px,6vw,65px);line-height:1.08}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:18px;line-height:1.7;margin:18px 0}
+.btn{border:0;border-radius:30px;padding:12px 21px;font-weight:bold;display:inline-block;text-align:center;box-shadow:0 4px 12px #0002;margin:3px}
+.btn-gold{background:linear-gradient(120deg,#ffe58c,#f2b916);color:#071a40}
+.btn-green{background:#08b957;color:white}
+.btn-blue{background:#0877e8;color:white}
+.btn-red{background:#d92c45;color:white}
+.btn-purple{background:#8729c9;color:white}
+section{padding:38px 4%}
+.section-title{text-align:center;font-size:clamp(24px,4vw,35px);color:#08265b;margin-bottom:27px;font-weight:900}
+.section-title span{color:#d99c00}
+.section-title:after{content:"";display:block;width:100px;height:4px;background:var(--gold);margin:11px auto;border-radius:5px}
+.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.category{background:white;border:1px solid #d8e2f7;border-radius:16px;overflow:hidden;box-shadow:0 8px 25px #06183d20;text-align:center;transition:.2s}
+.category:hover{transform:translateY(-4px)}
+.category img{width:100%;height:155px;object-fit:cover;display:block}
+.category-body{padding:14px}
+.category h3{font-size:16px;color:#09275b;margin-bottom:8px}
+.category p{font-size:13px;line-height:1.7;min-height:45px}
+.panel{background:white;border:2px solid var(--gold);border-radius:17px;overflow:hidden;box-shadow:0 8px 25px #06183d20}
+.panel-title{background:linear-gradient(110deg,#04183e,#0b3479);color:var(--gold);text-align:center;padding:14px;font-size:22px;font-weight:bold}
+.panel-content{padding:18px}
+.booking-layout{display:grid;grid-template-columns:1.7fr .8fr;gap:18px;align-items:start}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field.full{grid-column:1/-1}
+label{font-weight:bold;color:#142d5c;font-size:14px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #c8d5ed;border-radius:10px;background:#fbfcff;color:#142448;outline:none}
+input:focus,select:focus,textarea:focus{border-color:#d8a519;box-shadow:0 0 0 3px #f7c74435}
+textarea{min-height:85px;resize:vertical}
+.payment-box{background:linear-gradient(135deg,#fff0b8,#ffdb64);border:1px solid #e9b832;border-radius:15px;padding:18px;color:#071a40}
+.payment-box h3{text-align:center;margin-bottom:12px}
+.payment-line{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #d5ae4c;gap:8px}
+.payment-line:last-child{border:0;font-weight:bold;font-size:17px}
+.note{font-size:12px;line-height:1.6;color:#59491f;margin-top:12px}
+.highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.highlight{background:linear-gradient(135deg,#061a43,#0d3678);color:white;padding:20px 12px;text-align:center;border:1px solid var(--gold);border-radius:15px}
+.highlight .emoji{font-size:30px}
+.highlight h3{color:var(--gold);margin:9px 0}
+.highlight p{font-size:13px;line-height:1.6}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.contact-card{background:white;border-radius:15px;padding:20px;text-align:center;border:1px solid #dce3f3;box-shadow:0 8px 25px #06183d20}
+.contact-card .emoji{font-size:32px}
+.contact-card h3{color:#09275b;margin:10px}
+.action-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.action-tile{background:linear-gradient(110deg,#06183d,#0b3479);color:white;border:2px solid var(--gold);border-radius:13px;padding:16px 8px;text-align:center;font-weight:bold;display:block}
+.action-tile span{display:block;font-size:26px;margin-bottom:6px}
+.result-box{background:#edf4ff;border:1px solid #c7d8f7;border-radius:12px;padding:14px;margin-top:14px;line-height:1.8;overflow-wrap:anywhere}
+.hidden{display:none!important}
+.admin-area{background:white;border:2px solid var(--gold);border-radius:15px;padding:16px;margin-top:15px}
+.admin-booking{background:#f3f6ff;border:1px solid #d5def0;padding:13px;border-radius:10px;margin:10px 0;line-height:1.8;overflow-wrap:anywhere}
+.admin-booking select{max-width:220px}
+.table-wrap{overflow-x:auto}
+footer{background:linear-gradient(120deg,#03112e,#0b3479,#03112e);color:white;text-align:center;padding:32px 12px;border-top:5px solid var(--gold);line-height:1.9}
+footer h2{font-family:Georgia,serif;color:var(--gold);font-size:27px}
+footer a{color:#ffe69a}
+.float-wa{position:fixed;right:15px;bottom:17px;z-index:70;background:#08b957;color:white;border-radius:50%;width:58px;height:58px;display:grid;place-items:center;font-size:29px;box-shadow:0 4px 15px #0004}
+.preview-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.preview-grid img{width:95px;height:95px;object-fit:cover;border-radius:9px;border:2px solid var(--gold)}
+.status{display:inline-block;padding:4px 9px;border-radius:20px;background:#e7edff;font-weight:bold;font-size:12px}
+.notice{padding:12px;border-radius:10px;background:#fff4cc;color:#59420b;margin:12px 0;line-height:1.6}
+@media(max-width:850px){.categories{grid-template-columns:repeat(2,1fr)}.booking-layout{grid-template-columns:1fr}.highlights{grid-template-columns:repeat(2,1fr)}.action-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.topbar{font-size:11px}nav a{padding:9px 10px;font-size:12px}.hero{min-height:380px;padding:30px 5%;background-position:60% center}.hero p{font-size:16px}section{padding:28px 4%}.categories{gap:10px}.category img{height:110px}.category-body{padding:9px}.category h3{font-size:13px}.category p{font-size:12px}.category .btn{padding:9px 13px;font-size:12px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-grid{grid-template-columns:1fr}.panel-content{padding:12px}.section-title{font-size:24px}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+📍 Gaura Pipra Semrahna, Mihipurwa, Bahraich, Uttar Pradesh, India
+&nbsp; | &nbsp; 📞 <a href="tel:+917043551103">+91 7043551103</a>
+&nbsp; | &nbsp; <a href="https://wa.me/917043551103" target="_blank">WhatsApp Us</a>
+</div>
+
+<header>
+<div class="crown">👑</div>
+<div class="brand">NAJIYA ROYAL TENT HOUSE</div>
+<div class="tagline">हर खुशी के मौके को बनाएं यादगार</div>
+<div class="owner">OWNER: NUREALAM</div>
+</header>
+
+<nav>
+<a class="active" href="#home">⌂ Home</a>
+<a href="#categories">▦ Categories</a>
+<a href="#booking">▣ Booking</a>
+<a href="#mybooking">♙ My Booking</a>
+<a href="#cancel">⊘ Cancel</a>
+<a href="#contact">☎ Contact</a>
+<a href="#admin">♜ Admin</a>
+</nav>
+
+<div class="hero" id="home">
+<div class="hero-content">
+<div class="hero-label">👑 ROYAL WEDDING & EVENT SERVICES 👑</div>
+<h1>Your Celebration,<br><span>Our Decoration</span></h1>
+<p>शादी, पार्टी, टेंट, बर्तन, घर की सजावट, DJ और लाइटिंग की बुकिंग करें।</p>
+<a href="#booking" class="btn btn-gold">अभी बुकिंग करें ➜</a>
+<a href="https://wa.me/917043551103" target="_blank" class="btn btn-green">WhatsApp करें</a>
+</div>
+</div>
+
+<section id="categories">
+<h2 class="section-title">👑 हमारी <span>सर्विस और कैटेगरी</span></h2>
+<div class="categories">
+<article class="category">
+<img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=700&q=80" alt="Tent decoration">
+<div class="category-body"><h3>1. Tent House & Decoration</h3><p>शामियाना, वाटरप्रूफ तिरपाल, पर्दे, कुर्सी, टेबल, कारपेट, दरी।</p><button class="btn btn-gold" onclick="chooseCategory('Tent House & Decoration')">बुक करें</button></div>
+</article>
+<article class="category">
+<img src="https://images.unsplash.com/photo-1603199506016-b9a594b593c0?auto=format&fit=crop&w=700&q=80" alt="Catering equipment">
+<div class="category-body"><h3>2. Bartan & Catering Equipment</h3><p>थाली, प्लेट, कटोरी, गिलास, चम्मच, देग, भगोना, कड़ाही।</p><button class="btn btn-gold" onclick="chooseCategory('Bartan & Catering Equipment')">बुक करें</button></div>
+</article>
+<article class="category">
+<img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80" alt="Wedding decoration">
+<div class="category-body"><h3>3. Wedding Home Decoration</h3><p>गेट, दरवाजा, कमरा, बेड, फूलों की सजावट, झालर।</p><button class="btn btn-gold" onclick="chooseCategory('Wedding Home Decoration')">बुक करें</button></div>
+</article>
+<article class="category">
+<img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80" alt="DJ and lighting">
+<div class="category-body"><h3>4. DJ, Generator & Lighting</h3><p>DJ, स्पीकर, माइक, स्टेज लाइट, जनरेटर और बैकअप।</p><button class="btn btn-gold" onclick="chooseCategory('DJ, Generator & Lighting')">बुक करें</button></div>
+</article>
+</div>
+</section>
+
+<section id="booking">
+<h2 class="section-title">📅 ऑनलाइन <span>बुकिंग फॉर्म</span></h2>
+<div class="booking-layout">
+<div class="panel">
+<div class="panel-title">अपनी बुकिंग दर्ज करें</div>
+<div class="panel-content">
+<form id="bookingForm">
+<div class="form-grid">
+<div class="field"><label>पूरा नाम *</label><input id="customerName" required placeholder="अपना नाम लिखें"></div>
+<div class="field"><label>मोबाइल नंबर *</label><input id="customerPhone" required type="tel" placeholder="मोबाइल नंबर"></div>
+<div class="field"><label>कैटेगरी चुनें *</label>
+<select id="category" required>
+<option value="">कैटेगरी चुनें</option>
+<option>Tent House & Decoration</option>
+<option>Bartan & Catering Equipment</option>
+<option>Wedding Home Decoration</option>
+<option>DJ, Generator & Lighting</option>
+</select></div>
+<div class="field"><label>कार्यक्रम की तारीख *</label><input id="eventDate" type="date" required></div>
+<div class="field full"><label>कार्यक्रम का पूरा पता *</label><textarea id="eventAddress" required placeholder="कार्यक्रम का पता लिखें"></textarea></div>
+<div class="field full"><label>सामान / जरूरत की जानकारी *</label><textarea id="items" required placeholder="कौन-कौन सा सामान चाहिए, मात्रा आदि लिखें"></textarea></div>
+<div class="field"><label>कुल बुकिंग कीमत (₹) *</label><input id="totalPrice" type="number" min="0" step="1" required placeholder="कुल कीमत"></div>
+<div class="field"><label>अतिरिक्त जानकारी</label><input id="extraInfo" placeholder="कोई अन्य जानकारी"></div>
+<div class="field full">
+<button class="btn btn-gold" type="submit">बुकिंग सबमिट करें</button>
+</div>
+</div>
+</form>
+<div id="bookingMessage" class="result-box hidden"></div>
+</div>
+</div>
+
+<div class="payment-box">
+<h3>💳 Advance Payment: 20%</h3>
+<div class="payment-line"><span>कुल कीमत:</span><b id="displayTotal">₹0</b></div>
+<div class="payment-line"><span>20% Advance:</span><b id="displayAdvance">₹0</b></div>
+<div class="payment-line"><span>बाकी रकम:</span><b id="displayBalance">₹0</b></div>
+<p class="note">बुकिंग की पुष्टि के लिए कुल कीमत का 20% एडवांस निर्धारित है। भुगतान की वास्तविक पुष्टि व्यवसाय द्वारा की जाएगी।</p>
+</div>
+</div>
+</section>
+
+<section id="mybooking">
+<h2 class="section-title">♙ मेरी <span>बुकिंग देखें</span></h2>
+<div class="panel">
+<div class="panel-title">My Booking</div>
+<div class="panel-content">
+<div class="form-grid">
+<div class="field"><label>बुकिंग में दिया मोबाइल नंबर</label><input id="lookupPhone" type="tel" placeholder="मोबाइल नंबर"></div>
+<div class="field" style="justify-content:end"><button class="btn btn-blue" onclick="findBooking()">बुकिंग खोजें</button></div>
+</div>
+<div id="lookupResult" class="result-box hidden"></div>
+</div>
+</div>
+</section>
+
+<section id="cancel">
+<h2 class="section-title">⊘ बुकिंग <span>कैंसिल अनुरोध</span></h2>
+<div class="panel">
+<div class="panel-title">Cancel Booking</div>
+<div class="panel-content">
+<div class="notice">कैंसिलेशन अनुरोध कार्यक्रम की तारीख से कम से कम 5 दिन पहले भेजें। एडवांस राशि वापस नहीं होगी, लागू कानून और उपभोक्ता अधिकारों के अधीन।</div>
+<div class="form-grid">
+<div class="field"><label>बुकिंग ID</label><input id="cancelId" placeholder="बुकिंग ID"></div>
+<div class="field"><label>मोबाइल नंबर</label><input id="cancelPhone" type="tel" placeholder="बुकिंग वाला नंबर"></div>
+<div class="field full"><label>कैंसिल करने का कारण</label><textarea id="cancelReason" placeholder="कारण लिखें"></textarea></div>
+<div class="field full"><button class="btn btn-red" onclick="requestCancel()">कैंसिलेशन अनुरोध भेजें</button></div>
+</div>
+<div id="cancelMessage" class="result-box hidden"></div>
+</div>
+</div>
+</section>
+
+<section id="highlights">
+<h2 class="section-title">✨ हमारी <span>खासियत</span></h2>
+<div class="highlights">
+<div class="highlight"><div class="emoji">👑</div><h3>Professional Service</h3><p>शानदार और व्यवस्थित सर्विस।</p></div>
+<div class="highlight"><div class="emoji">🌹</div><h3>Best Decoration</h3><p>शादी और पार्टी की खूबसूरत सजावट।</p></div>
+<div class="highlight"><div class="emoji">⏰</div><h3>On Time Service</h3><p>समय पर सामान और सर्विस।</p></div>
+<div class="highlight"><div class="emoji">💰</div><h3>Affordable Price</h3><p>आपकी जरूरत के अनुसार कीमत।</p></div>
+</div>
+</section>
+
+<section id="photos">
+<h2 class="section-title">📸 सामान की <span>फोटो अपलोड करें</span></h2>
+<div class="panel">
+<div class="panel-title">Inventory Photo Preview</div>
+<div class="panel-content">
+<p>अपने सामान की फोटो चुनें और उसका Preview देखें।</p><br>
+<input type="file" id="photoInput" accept="image/*" multiple>
+<div id="photoPreview" class="preview-grid"></div>
+<p class="note">यह फोटो Preview केवल इसी डिवाइस पर दिखता है। सभी ग्राहकों को फोटो दिखाने के लिए ऑनलाइन फोटो स्टोरेज जोड़ना होगा।</p>
+</div>
+</div>
+</section>
+
+<section id="payment">
+<h2 class="section-title">💳 <span>Payment Information</span></h2>
+<div class="panel">
+<div class="panel-title">पेमेंट जानकारी</div>
+<div class="panel-content">
+<p>बुकिंग के लिए 20% एडवांस निर्धारित है। पेमेंट करने से पहले व्यवसाय से राशि और भुगतान का तरीका कन्फर्म करें।</p><br>
+<a class="btn btn-green" href="https://wa.me/917043551103?text=Namaste%2C%20mujhe%20booking%20payment%20ki%20jankari%20chahiye." target="_blank">WhatsApp पर पेमेंट जानकारी लें</a>
+<div class="notice">अभी वेबसाइट में कोई वास्तविक पेमेंट गेटवे कनेक्ट नहीं है। UPI या ऑनलाइन भुगतान के लिए सुरक्षित पेमेंट गेटवे इंटीग्रेशन जरूरी है।</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="section-title">☎ हमसे <span>संपर्क करें</span></h2>
+<div class="contact-grid">
+<div class="contact-card"><div class="emoji">💬</div><h3>WhatsApp Message</h3><p>हमें WhatsApp पर मैसेज भेजें।</p><br><a class="btn btn-green" href="https://wa.me/917043551103" target="_blank">WhatsApp करें</a></div>
+<div class="contact-card"><div class="emoji">📞</div><h3>Call Now</h3><p>सीधे फोन पर बात करें।</p><br><a class="btn btn-blue" href="tel:+917043551103">+91 7043551103</a></div>
+<div class="contact-card"><div class="emoji">✉️</div><h3>Send SMS</h3><p>मोबाइल से SMS भेजें।</p><br><a class="btn btn-purple" href="sms:+917043551103">Send SMS</a></div>
+</div>
+</section>
+
+<section>
+<h2 class="section-title">⚙️ बुकिंग और <span>मैनेजमेंट</span></h2>
+<div class="action-grid">
+<a class="action-tile" href="#mybooking"><span>📅</span>My Booking<br>अपनी बुकिंग देखें</a>
+<a class="action-tile" href="#cancel"><span>🚫</span>Cancel Booking<br>कैंसिलेशन अनुरोध</a>
+<a class="action-tile" href="#payment"><span>💳</span>Payment Info<br>पेमेंट जानकारी</a>
+<a class="action-tile" href="#admin"><span>🛡️</span>Admin Panel<br>सभी बुकिंग देखें</a>
+</div>
+</section>
+
+<section id="admin">
+<h2 class="section-title">🛡️ <span>Admin Control Panel</span></h2>
+<div class="panel">
+<div class="panel-title">Admin Login</div>
+<div class="panel-content">
+<div id="adminLogin">
+<div class="field"><label>Admin Password</label><input id="adminPassword" type="password" placeholder="पासवर्ड डालें"></div><br>
+<button class="btn btn-gold" onclick="adminLogin()">Admin Login</button>
+<p class="note">डेमो पासवर्ड: NRT2026 — लाइव वेबसाइट पर इसे बदलकर सुरक्षित सर्वर-आधारित लॉगिन लगाएँ।</p>
+</div>
+<div id="adminDashboard" class="hidden">
+<h3>सभी बुकिंग</h3><br>
+<button class="btn btn-blue" onclick="renderAdmin()">Refresh</button>
+<button class="btn btn-green" onclick="exportCSV()">Download CSV</button>
+<button class="btn btn-red" onclick="adminLogout()">Logout</button>
+<div id="adminBookings"></div>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<h2>👑 NAJIYA ROYAL TENT HOUSE</h2>
+<strong>Owner: NUREALAM</strong><br>
+Gaura Pipra Semrahna, Mihipurwa, Bahraich,<br>Uttar Pradesh, India<br>
+📞 <a href="tel:+917043551103">+91 7043551103</a><br>
+<a href="https://wa.me/917043551103" target="_blank">WhatsApp Contact</a>
+<p>Dream Big... Celebrate Better...</p>
+<p style="font-size:12px;color:#d5def0">© 2026 NAJIYA ROYAL TENT HOUSE. All Rights Reserved.</p>
+</footer>
+
+<a class="float-wa" href="https://wa.me/917043551103" target="_blank" aria-label="WhatsApp">☘</a>
+
+<script>
+const PHONE="917043551103";
+const STORAGE_KEY="najiya_royal_bookings_v1";
+let bookings=loadBookings();
+
+function loadBookings(){
+ try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||"[]")}
+ catch(e){return []}
+}
+function saveBookings(){
+ localStorage.setItem(STORAGE_KEY,JSON.stringify(bookings));
+}
+function money(n){
+ return "₹"+Number(n||0).toLocaleString("en-IN",{maximumFractionDigits:2});
+}
+function safe(value){
+ return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function makeId(){
+ return "NRT"+Date.now().toString().slice(-9);
+}
+function updatePayment(){
+ const total=Math.max(0,Number(document.getElementById("totalPrice").value)||0);
+ const advance=total*.20;
+ document.getElementById("displayTotal").textContent=money(total);
+ document.getElementById("displayAdvance").textContent=money(advance);
+ document.getElementById("displayBalance").textContent=money(total-advance);
+}
+document.getElementById("totalPrice").addEventListener("input",updatePayment);
+function chooseCategory(name){
+ document.getElementById("category").value=name;
+ document.getElementById("booking").scrollIntoView({behavior:"smooth"});
+}
+document.getElementById("bookingForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const name=document.getElementById("customerName").value.trim();
+ const phone=document.getElementById("customerPhone").value.trim();
+ const category=document.getElementById("category").value;
+ const date=document.getElementById("eventDate").value;
+ const address=document.getElementById("eventAddress").value.trim();
+ const items=document.getElementById("items").value.trim();
+ const total=Number(document.getElementById("totalPrice").value);
+ if(!name||!phone||!category||!date||!address||!items||!Number.isFinite(total)||total<0){
+  alert("कृपया सभी जरूरी जानकारी सही भरें।");return;
+ }
+ if(!/^[0-9+\-\s]{7,18}$/.test(phone)){
+  alert("कृपया सही मोबाइल नंबर डालें।");return;
+ }
+ const advance=total*.20;
+ const booking={
+  id:makeId(),name,phone,category,date,address,items,total,advance,
+  balance:total-advance,extra:document.getElementById("extraInfo").value.trim(),
+  status:"Pending",cancelStatus:"",created:new Date().toISOString()
+ };
+ bookings.push(booking);saveBookings();
+ const msg=document.getElementById("bookingMessage");
+ msg.classList.remove("hidden");
+ msg.innerHTML="<h3>✅ आपकी बुकिंग दर्ज हो गई!</h3>"+
+ "<b>Booking ID:</b> "+safe(booking.id)+"<br>"+
+ "<b>नाम:</b> "+safe(name)+"<br><b>कैटेगरी:</b> "+safe(category)+
+ "<br><b>कार्यक्रम:</b> "+safe(date)+"<br><b>कुल कीमत:</b> "+money(total)+
+ "<br><b>20% एडवांस:</b> "+money(advance)+"<br><b>बाकी:</b> "+money(total-advance)+
+ "<br><b>Status:</b> Pending";
+ const text="NAJIYA ROYAL TENT HOUSE Booking%0A"+
+ "Booking ID: "+encodeURIComponent(booking.id)+"%0A"+
+ "Name: "+encodeURIComponent(name)+"%0A"+
+ "Phone: "+encodeURIComponent(phone)+"%0A"+
+ "Category: "+encodeURIComponent(category)+"%0A"+
+ "Event Date: "+encodeURIComponent(date)+"%0A"+
+ "Address: "+encodeURIComponent(address)+"%0A"+
+ "Items: "+encodeURIComponent(items)+"%0A"+
+ "Total: "+encodeURIComponent(money(total))+"%0A"+
+ "Advance 20%: "+encodeURIComponent(money(advance));
+ msg.innerHTML+="<br><br><a class='btn btn-green' target='_blank' href='https://wa.me/"+PHONE+"?text="+text+"'>WhatsApp पर बुकिंग भेजें</a>";
+ this.reset();updatePayment();
+});
+function findBooking(){
+ const phone=document.getElementById("lookupPhone").value.trim();
+ const result=document.getElementById("lookupResult");
+ result.classList.remove("hidden");
+ if(!phone){result.textContent="कृपया मोबाइल नंबर डालें।";return}
+ const found=bookings.filter(b=>b.phone===phone);
+ if(!found.length){result.textContent="इस नंबर से कोई बुकिंग नहीं मिली।";return}
+ result.innerHTML=found.map(b=>"<div class='admin-booking'><b>Booking ID:</b> "+safe(b.id)+
+ "<br><b>Category:</b> "+safe(b.category)+"<br><b>Event Date:</b> "+safe(b.date)+
+ "<br><b>Total:</b> "+money(b.total)+"<br><b>Advance:</b> "+money(b.advance)+
+ "<br><b>Balance:</b> "+money(b.balance)+"<br><b>Status:</b> <span class='status'>"+
+ safe(b.status)+"</span><br><b>Cancellation:</b> "+safe(b.cancelStatus||"None")+"</div>").join("");
+}
+function requestCancel(){
+ const id=document.getElementById("cancelId").value.trim();
+ const phone=document.getElementById("cancelPhone").value.trim();
+ const reason=document.getElementById("cancelReason").value.trim();
+ const result=document.getElementById("cancelMessage");
+ result.classList.remove("hidden");
+ const b=bookings.find(x=>x.id.toLowerCase()===id.toLowerCase()&&x.phone===phone);
+ if(!b){result.textContent="बुकिंग ID या मोबाइल नंबर सही नहीं है।";return}
+ if(!reason){result.textContent="कृपया कैंसिलेशन का कारण लिखें।";return}
+ const event=new Date(b.date+"T00:00:00");
+ const today=new Date();today.setHours(0,0,0,0);
+ const days=Math.ceil((event-today)/(1000*60*60*24));
+ if(days<5){result.textContent="कैंसिलेशन अनुरोध कार्यक्रम से कम से कम 5 दिन पहले ही किया जा सकता है।";return}
+ b.cancelStatus="Cancellation Requested";
+ b.cancelReason=reason;
+ saveBookings();
+ result.innerHTML="आपका कैंसिलेशन अनुरोध दर्ज किया गया है।<br>Booking ID: "+safe(b.id)+
+ "<br><a class='btn btn-green' target='_blank' href='https://wa.me/"+PHONE+"?text="+
+ encodeURIComponent("Cancellation Request\nBooking ID: "+b.id+"\nPhone: "+phone+"\nReason: "+reason)+
+ "'>WhatsApp पर अनुरोध भेजें</a>";
+}
+function adminLogin(){
+ if(document.getElementById("adminPassword").value==="NRT2026"){
+  document.getElementById("adminLogin").classList.add("hidden");
+  document.getElementById("adminDashboard").classList.remove("hidden");
+  renderAdmin();
+ }else alert("गलत पासवर्ड!");
+}
+function adminLogout(){
+ document.getElementById("adminDashboard").classList.add("hidden");
+ document.getElementById("adminLogin").classList.remove("hidden");
+ document.getElementById("adminPassword").value="";
+}
+function renderAdmin(){
+ const box=document.getElementById("adminBookings");
+ if(!bookings.length){box.innerHTML="<p>अभी कोई बुकिंग नहीं है।</p>";return}
+ box.innerHTML=bookings.slice().reverse().map(b=>
+ "<div class='admin-booking'><b>Booking ID:</b> "+safe(b.id)+
+ "<br><b>नाम:</b> "+safe(b.name)+"<br><b>फोन:</b> "+safe(b.phone)+
+ "<br><b>कैटेगरी:</b> "+safe(b.category)+"<br><b>तारीख:</b> "+safe(b.date)+
+ "<br><b>पता:</b> "+safe(b.address)+"<br><b>सामान:</b> "+safe(b.items)+
+ "<br><b>कुल:</b> "+money(b.total)+" | <b>Advance:</b> "+money(b.advance)+
+ "<br><b>Cancellation:</b> "+safe(b.cancelStatus||"None")+
+ "<br><label>Status बदलें: </label> <select onchange='changeStatus(\""+safe(b.id)+"\",this.value)'>"+
+ ["Pending","Confirmed","Completed","Cancelled"].map(s=>"<option "+(b.status===s?"selected":"")+">"+s+"</option>").join("")+
+ "</select></div>"
+ ).join("");
+}
+function changeStatus(id,status){
+ const b=bookings.find(x=>x.id===id);
+ if(b){b.status=status;saveBookings();renderAdmin()}
+}
+function exportCSV(){
+ if(!bookings.length){alert("डाउनलोड करने के लिए बुकिंग नहीं है।");return}
+ const columns=["id","name","phone","category","date","address","items","total","advance","balance","status","cancelStatus","created"];
+ const quote=v=>'"'+String(v??"").replace(/"/g,'""')+'"';
+ const csv=[columns.join(","),...bookings.map(b=>columns.map(k=>quote(b[k])).join(","))].join("\r\n");
+ const blob=new Blob(["\uFEFF"+csv],{type:"text/csv;charset=utf-8"});
+ const url=URL.createObjectURL(blob);
+ const a=document.createElement("a");a.href=url;a.download="najiya-bookings.csv";a.click();
+ URL.revokeObjectURL(url);
+}
+document.getElementById("photoInput").addEventListener("change",function(){
+ const box=document.getElementById("photoPreview");box.innerHTML="";
+ Array.from(this.files||[]).forEach(file=>{
+  if(!file.type.startsWith("image/"))return;
+  const img=document.createElement("img");
+  const reader=new FileReader();
+  reader.onload=e=>img.src=e.target.result;
+  reader.readAsDataURL(file);box.appendChild(img);
+ });
+});
+updatePayment();
+</script>
+</body>
+</html>
