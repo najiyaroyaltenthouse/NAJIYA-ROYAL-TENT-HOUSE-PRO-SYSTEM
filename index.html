@@ -1,182 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Najiya Royal Tent House</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17091f">
+<title>NAJIYA ROYAL TENT HOUSE</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#100d0a;color:white;line-height:1.6}
-:root{--gold:#d6ad60;--dark:#100d0a;--brown:#24180f}
-
-header{background:#100d0a;padding:18px 7%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;border-bottom:1px solid #6e542e;position:sticky;top:0;z-index:100}
-.logo{color:var(--gold);font-size:23px;font-weight:bold}
-nav{display:flex;gap:18px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-size:14px}
-nav a:hover{color:var(--gold)}
-
-.hero{min-height:600px;padding:90px 8%;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.8)),url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1800&q=85") center/cover}
-.hero-content{max-width:850px}
-.hero h1{color:var(--gold);font-size:clamp(38px,7vw,68px);line-height:1.15;margin-bottom:20px}
-.hero p{font-size:19px;color:#f5e5c4;margin-bottom:30px}
-
-.btn{display:inline-block;background:var(--gold);color:#17100a;padding:13px 27px;border-radius:4px;text-decoration:none;font-weight:bold;margin:6px;transition:.3s}
-.btn:hover{background:#f2d18e;transform:translateY(-3px)}
-.btn-outline{background:transparent;border:1px solid var(--gold);color:var(--gold)}
-
-section{padding:75px 8%}
-.section-title{text-align:center;color:var(--gold);font-size:36px;margin-bottom:12px}
-.gold-line{width:75px;height:3px;background:var(--gold);margin:0 auto 35px}
-.intro{max-width:850px;text-align:center;margin:auto;color:#e2d5c2;font-size:17px}
-
-.about,.gallery,.contact{background:var(--brown)}
-.services-grid,.gallery-grid,.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
-
-.service-card,.why-card{background:#21170f;border:1px solid #594326;padding:28px 22px;text-align:center;border-radius:8px;transition:.3s}
-.service-card:hover,.why-card:hover{transform:translateY(-6px);border-color:var(--gold)}
-.symbol{font-size:38px;margin-bottom:12px}
-.service-card h3,.why-card h3{color:var(--gold);margin-bottom:10px}
-.service-card p,.why-card p{color:#d6c8b5;font-size:14px}
-
-.gallery-grid img{width:100%;height:230px;object-fit:cover;border-radius:7px;border:1px solid #6e542e}
-
-.feature{text-align:center;background:#17110c}
-.feature p{max-width:750px;margin:0 auto 25px;color:#e2d5c2}
-.contact{text-align:center}
-.contact p{color:#e2d5c2;margin:12px 0}
-
-footer{background:#090705;text-align:center;padding:25px 15px;color:#c8b28e;border-top:1px solid #594326;font-size:14px}
-
-.whatsapp-float{position:fixed;right:20px;bottom:20px;background:#25d366;color:white;text-decoration:none;padding:14px 19px;border-radius:50px;font-weight:bold;z-index:200;box-shadow:0 4px 15px #0008}
-
-@media(max-width:650px){
-header{justify-content:center;gap:12px}
-nav{justify-content:center;gap:13px}
-.hero{min-height:520px;padding:70px 6%}
-section{padding:58px 6%}
-.section-title{font-size:29px}
-}
+:root{--gold:#f6d477;--gold2:#d99e28;--purple:#210b2d;--ink:#100716;--cream:#fff6df}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:#fff;font-family:Arial,"Noto Sans Devanagari",sans-serif}
+a{color:inherit;text-decoration:none}
+.top{background:#16051f;color:#ffe6a2;text-align:center;padding:13px 10px;font-weight:bold;line-height:1.7}
+.hero{min-height:390px;display:flex;align-items:center;justify-content:center;text-align:center;padding:55px 18px;background:linear-gradient(#210b2dcc,#210b2dcc),url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=85') center/cover}
+.hero h1{font-family:Georgia,serif;color:var(--gold);font-size:clamp(36px,8vw,62px);margin:14px 0 4px;text-shadow:0 3px 15px #000}
+.hero h2{font-family:Georgia,serif;font-size:clamp(24px,5vw,38px);margin:0}
+.hero p{font-size:clamp(18px,4vw,25px);line-height:1.7}
+.crown{font-size:55px}
+nav{position:sticky;top:0;z-index:5;background:#170820;border-top:5px solid var(--gold2);border-bottom:1px solid #98713a;display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:17px 8px}
+nav a{color:var(--gold);font-weight:bold;padding:7px 9px}
+section{padding:55px 16px;max-width:1100px;margin:auto}
+h2.section-title{text-align:center;color:var(--gold);font-size:32px;margin:0 0 28px}
+.intro{text-align:center;background:linear-gradient(135deg,#24102f,#120819);max-width:none}
+.intro h2{font-size:clamp(30px,6vw,48px);color:var(--gold);line-height:1.45}
+.intro p{font-size:20px;line-height:1.8;max-width:800px;margin:20px auto}
+.btn{display:inline-block;border:2px solid var(--gold);border-radius:40px;padding:15px 25px;margin:8px;background:linear-gradient(120deg,#ffe6a0,#d69b28);color:#26102b;font-size:18px;font-weight:bold}
+.btn.alt{background:#2b103b;color:#fff}
+.cards,.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:linear-gradient(145deg,#321344,#180b20);border:1px solid #9d793d;border-radius:18px;padding:24px;text-align:center;box-shadow:0 8px 25px #0005}
+.card .emoji{font-size:38px}
+.card h3{color:var(--gold);font-size:22px}
+.gallery img{width:100%;height:210px;object-fit:cover;border-radius:15px;border:2px solid #9d793d}
+form{max-width:650px;margin:auto;background:#21102b;padding:23px;border:1px solid #a17a3b;border-radius:18px}
+input,select,textarea{width:100%;padding:14px;margin:8px 0 14px;border-radius:9px;border:1px solid #c6a35d;background:#fff;color:#21102b;font-size:16px}
+label{color:#ffe6a2;font-weight:bold}
+button{cursor:pointer;border:0}
+form button{width:100%}
+.contact{text-align:center;background:#1b0b26;border-radius:20px}
+footer{text-align:center;padding:25px;color:#f8d98e;background:#100616}
+#adminPanel{display:none}
+.small{font-size:13px;color:#e8d9bd;line-height:1.6}
 </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">NAJIYA ROYAL</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<div class="top">✨ शादी • पार्टी • स्टेज • लाइटिंग • डेकोरेशन ✨ &nbsp; | &nbsp; Call: +91 7043551103</div>
+
+<header class="hero" id="home">
+  <div>
+    <div class="crown">👑</div>
+    <h1>NAJIYA ROYAL</h1>
+    <h2>TENT HOUSE</h2>
+    <p>शादी • पार्टी • स्टेज • लाइटिंग • डेकोरेशन</p>
+  </div>
 </header>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <h1>Najiya Royal Tent House</h1>
-    <p>Make Every Celebration Royal, Beautiful & Memorable</p>
-    <a class="btn" href="https://wa.me/917043551103?text=Hello%2C%20I%20want%20to%20know%20about%20your%20services.">Contact Us on WhatsApp</a>
-    <a class="btn btn-outline" href="#services">Explore Services</a>
-  </div>
-</section>
+<nav>
+  <a href="#home">⌂ Home</a>
+  <a href="#services">✧ Services</a>
+  <a href="#gallery">▧ Gallery</a>
+  <a href="#booking">▦ Booking</a>
+  <a href="#contact">☎ Contact</a>
+  <a href="#admin">♛ Admin</a>
+</nav>
 
-<section class="about" id="about">
-  <h2 class="section-title">About Us</h2>
-  <div class="gold-line"></div>
-  <p class="intro">
-    Welcome to Najiya Royal Tent House. We believe every celebration deserves a beautiful and special arrangement. Our aim is to make your weddings, parties and special occasions elegant, comfortable and memorable with beautiful decoration and event arrangements.
-  </p>
-</section>
+<div class="intro">
+  <section>
+    <div style="display:inline-block;border:2px solid var(--gold);border-radius:40px;padding:12px 24px;color:var(--gold);letter-spacing:2px">✦ ROYAL EVENT DECORATION ✦</div>
+    <h2>आपके हर समारोह को<br>बनाएं यादगार!</h2>
+    <p>शादी, पार्टी और हर खास मौके के लिए शानदार टेंट, रॉयल स्टेज, खूबसूरत लाइटिंग और फूलों की सजावट।</p>
+    <a class="btn" href="#booking">▦ अभी बुकिंग करें</a>
+    <a class="btn alt" href="tel:+917043551103">☎ Call Now</a>
+  </section>
+</div>
 
 <section id="services">
-  <h2 class="section-title">Our Services</h2>
-  <div class="gold-line"></div>
-  <div class="services-grid">
-    <div class="service-card">
-      <div class="symbol">⛺</div>
-      <h3>Royal Tent Setup</h3>
-      <p>Beautiful tent arrangements for your special occasions.</p>
-    </div>
-    <div class="service-card">
-      <div class="symbol">💍</div>
-      <h3>Wedding Decoration</h3>
-      <p>Elegant decoration to make your wedding unforgettable.</p>
-    </div>
-    <div class="service-card">
-      <div class="symbol">🎉</div>
-      <h3>Party Decoration</h3>
-      <p>Special arrangements for parties and family celebrations.</p>
-    </div>
-    <div class="service-card">
-      <div class="symbol">🌸</div>
-      <h3>Stage Decoration</h3>
-      <p>Attractive stage setups for memorable moments.</p>
-    </div>
-    <div class="service-card">
-      <div class="symbol">💡</div>
-      <h3>Lighting Decoration</h3>
-      <p>Beautiful lighting to create a wonderful atmosphere.</p>
-    </div>
-    <div class="service-card">
-      <div class="symbol">🪑</div>
-      <h3>Furniture Arrangement</h3>
-      <p>Comfortable seating and event furniture arrangements.</p>
-    </div>
+  <h2 class="section-title">हमारी सेवाएं</h2>
+  <div class="cards">
+    <article class="card"><div class="emoji">💍</div><h3>शादी टेंट</h3><p>शादी और निकाह के लिए शानदार टेंट व्यवस्था।</p></article>
+    <article class="card"><div class="emoji">👑</div><h3>रॉयल स्टेज</h3><p>खूबसूरत स्टेज और आकर्षक बैकड्रॉप सजावट।</p></article>
+    <article class="card"><div class="emoji">💡</div><h3>लाइटिंग</h3><p>रंग-बिरंगी लाइट और शानदार रोशनी।</p></article>
+    <article class="card"><div class="emoji">🌸</div><h3>फूलों की सजावट</h3><p>फूलों और थीम के साथ खास डेकोरेशन।</p></article>
+    <article class="card"><div class="emoji">🎉</div><h3>पार्टी डेकोरेशन</h3><p>जन्मदिन, सालगिरह और अन्य कार्यक्रम।</p></article>
+    <article class="card"><div class="emoji">🪑</div><h3>कुर्सी व पंडाल</h3><p>मेहमानों के लिए बैठने और पंडाल की व्यवस्था।</p></article>
   </div>
 </section>
 
-<section class="gallery" id="gallery">
-  <h2 class="section-title">Our Gallery</h2>
-  <div class="gold-line"></div>
-  <div class="gallery-grid">
-    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Wedding decoration">
-    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80" alt="Event table setup">
-    <img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=800&q=80" alt="Wedding celebration">
-    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Event venue">
+<section id="gallery">
+  <h2 class="section-title">हमारी गैलरी</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=700&q=80" alt="Wedding decoration">
+    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80" alt="Event decoration" onerror="this.src='https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80'">
+    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80" alt="Wedding stage">
   </div>
 </section>
 
-<section>
-  <h2 class="section-title">Why Choose Us?</h2>
-  <div class="gold-line"></div>
-  <div class="why-grid">
-    <div class="why-card">
-      <h3>Beautiful Designs</h3>
-      <p>Stylish arrangements for your special celebrations.</p>
-    </div>
-    <div class="why-card">
-      <h3>Quality Service</h3>
-      <p>We focus on making every event special.</p>
-    </div>
-    <div class="why-card">
-      <h3>Customer Satisfaction</h3>
-      <p>Your happiness and satisfaction matter to us.</p>
-    </div>
+<section id="booking">
+  <h2 class="section-title">बुकिंग करें</h2>
+  <form id="bookingForm">
+    <label>आपका नाम</label><input id="name" required placeholder="अपना नाम लिखें">
+    <label>मोबाइल नंबर</label><input id="phone" required type="tel" placeholder="मोबाइल नंबर">
+    <label>कार्यक्रम</label>
+    <select id="event" required><option value="">कार्यक्रम चुनें</option><option>शादी</option><option>पार्टी</option><option>जन्मदिन</option><option>अन्य</option></select>
+    <label>कार्यक्रम की तारीख</label><input id="date" type="date" required>
+    <label>कार्यक्रम का पता</label><textarea id="address" rows="3" required placeholder="पूरा पता लिखें"></textarea>
+    <label>अन्य जानकारी</label><textarea id="details" rows="3" placeholder="कितने मेहमान, कौन-सी सजावट आदि"></textarea>
+    <button class="btn" type="submit">WhatsApp पर बुकिंग भेजें</button>
+  </form>
+  <p class="small" style="text-align:center">बुकिंग भेजने पर WhatsApp खुलेगा। जानकारी भेजने से पहले आप उसे देख सकते हैं।</p>
+</section>
+
+<section id="contact" class="contact">
+  <h2 class="section-title">संपर्क करें</h2>
+  <p>NAJIYA ROYAL TENT HOUSE</p>
+  <p>📞 +91 7043551103</p>
+  <a class="btn" href="tel:+917043551103">Call Now</a>
+  <a class="btn alt" href="https://wa.me/917043551103">WhatsApp</a>
+</section>
+
+<section id="admin">
+  <h2 class="section-title">Admin</h2>
+  <div class="card">
+    <p>यह साधारण डेमो एडमिन सेक्शन है। सुरक्षित ऑनलाइन एडमिन पैनल के लिए सर्वर और लॉगिन सिस्टम जरूरी है।</p>
+    <button class="btn" type="button" onclick="adminLogin()">Admin Login</button>
+    <div id="adminPanel"><p>वेबसाइट का यह संस्करण बुकिंग को किसी साझा सर्वर पर सेव नहीं करता। WhatsApp से आने वाली बुकिंग देखें।</p></div>
   </div>
 </section>
 
-<section class="feature">
-  <h2 class="section-title">Your Celebration, Our Responsibility</h2>
-  <div class="gold-line"></div>
-  <p>From beautiful tents to royal decorations, we help make your important occasions special, elegant and memorable.</p>
-  <a class="btn" href="https://wa.me/917043551103?text=Hello%2C%20I%20would%20like%20to%20discuss%20an%20event.">Let's Plan Your Event</a>
-</section>
+<footer>© 2026 NAJIYA ROYAL TENT HOUSE | All Rights Reserved</footer>
 
-<section class="contact" id="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <div class="gold-line"></div>
-  <p>For bookings and enquiries, contact us on WhatsApp.</p>
-  <p><strong>WhatsApp:</strong> +91 7043551103</p>
-  <a class="btn" href="https://wa.me/917043551103">Chat on WhatsApp</a>
-</section>
+<script>
+document.getElementById('bookingForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const phone=document.getElementById('phone').value.trim();
+  const event=document.getElementById('event').value;
+  const date=document.getElementById('date').value;
+  const address=document.getElementById('address').value.trim();
+  const details=document.getElementById('details').value.trim();
 
-<a class="whatsapp-float" href="https://wa.me/917043551103" target="_blank">WhatsApp</a>
+  const msg=`NAJIYA ROYAL TENT HOUSE - Booking Request
+Name: ${name}
+Phone: ${phone}
+Event: ${event}
+Date: ${date}
+Address: ${address}
+Details: ${details}`;
 
-<footer>
-  <p>© 2026 Najiya Royal Tent House. All Rights Reserved.</p>
-</footer>
+  window.open('https://wa.me/917043551103?text='+encodeURIComponent(msg),'_blank');
+});
 
+function adminLogin(){
+  const pass=prompt('Admin demo password:');
+  if(pass==='ChangeThis123'){
+    document.getElementById('adminPanel').style.display='block';
+    alert('Demo panel opened. Is password ko public website par secure na samjhein.');
+  }else if(pass!==null){
+    alert('Password galat hai.');
+  }
+}
+</script>
 </body>
 </html>
