@@ -1,32 +1,31 @@
 
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NAJIYA ROYAL TENT HOUSE</title>
 <style>
-*{box-sizing:border-box}
-:root{--gold:#e8bd65;--purple:#24113b}
-body{margin:0;background:#10091b;color:white;font-family:Arial,sans-serif}
-header{text-align:center;padding:25px 12px;background:linear-gradient(135deg,#160b27,#542779);border-bottom:3px solid var(--gold)}
-.logo{font-size:30px;color:var(--gold);font-weight:bold}
-nav{display:flex;justify-content:center;gap:15px;flex-wrap:wrap;background:#190d29;padding:15px}
-nav a{color:var(--gold);text-decoration:none;font-weight:bold}
-.hero{text-align:center;padding:65px 15px;background:linear-gradient(135deg,#48216b,#160b27)}
-.hero h1{font-size:32px;color:var(--gold)}
-.hero p{line-height:1.7}
-.btn{display:inline-block;background:var(--gold);color:#241333;padding:13px 20px;border-radius:30px;text-decoration:none;font-weight:bold;border:0;cursor:pointer;margin:5px}
+*{box-sizing:border-box;scroll-behavior:smooth}
+:root{--gold:#f5cb65;--purple:#310b50}
+body{margin:0;background:#100719;color:white;font-family:Arial,sans-serif}
+header{text-align:center;padding:28px 12px;background:linear-gradient(135deg,#160720,#642080);border-bottom:3px solid var(--gold)}
+.logo{font-size:34px;font-weight:bold;color:var(--gold)}
+nav{position:sticky;top:0;z-index:10;display:flex;justify-content:center;flex-wrap:wrap;background:#190d29;padding:12px}
+nav a{color:var(--gold);text-decoration:none;padding:10px;font-weight:bold}
+.hero{text-align:center;padding:65px 15px;background:radial-gradient(ellipse,#642080,#160b27)}
+.hero h1{font-size:35px;color:var(--gold)}
+.hero p{font-size:18px;line-height:1.8}
+.btn{display:inline-block;background:linear-gradient(135deg,#ffe49a,#e5a51e);color:#241333;padding:13px 20px;border-radius:30px;text-decoration:none;font-weight:bold;border:0;cursor:pointer;margin:5px}
 .dark{background:#3c1b5b;color:white;border:1px solid var(--gold)}
-section{padding:35px 15px;max-width:1050px;margin:auto}
-.heading{text-align:center;color:var(--gold);font-size:27px;margin-bottom:25px}
+section{padding:38px 15px;max-width:1100px;margin:auto}
+.heading{text-align:center;color:var(--gold);font-size:28px;margin-bottom:25px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
 .card{background:linear-gradient(145deg,#321b49,#1b1029);border:1px solid #a7834b;border-radius:15px;padding:20px;text-align:center}
 .card h3{color:var(--gold)}
 .emoji{font-size:40px}
-.gallery{min-height:130px;background:linear-gradient(135deg,#4b246b,#20102f);border:1px solid var(--gold);border-radius:14px;padding:25px;text-align:center;color:var(--gold);font-size:20px}
-form{max-width:700px;margin:auto;padding:20px;background:#211333;border:1px solid var(--gold);border-radius:15px}
+.gallery{background:linear-gradient(135deg,#4b246b,#20102f);border:1px solid var(--gold);border-radius:14px;padding:30px;text-align:center;color:var(--gold);font-size:20px}
+form{max-width:750px;margin:auto;padding:20px;background:#211333;border:1px solid var(--gold);border-radius:15px}
 label{display:block;margin:12px 0 6px;color:var(--gold);font-weight:bold}
 input,select,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid #9b7cae;font-size:16px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -34,14 +33,17 @@ input,select,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid
 .note{text-align:center;color:#f5dfb6;line-height:1.6}
 #admin{display:none}
 .booking{padding:15px;margin:12px 0;background:#2c1940;border:1px solid var(--gold);border-radius:10px;overflow-wrap:anywhere}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:15px 0}
+.stat{padding:15px;text-align:center;background:#35194c;border:1px solid var(--gold);border-radius:10px}
+.stat strong{display:block;color:var(--gold);font-size:25px}
 footer{text-align:center;padding:25px;background:#160b25;border-top:2px solid var(--gold);line-height:1.8}
-@media(max-width:550px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.hero h1{font-size:27px}}
+@media(max-width:550px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.hero h1{font-size:27px}.stats{grid-template-columns:1fr 1fr}nav a{font-size:13px;padding:9px 7px}}
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">NAJIYA ROYAL</div>
+<div class="logo">👑 NAJIYA ROYAL</div>
 <h2>TENT HOUSE</h2>
 <p>शादी • पार्टी • स्टेज • लाइटिंग • डेकोरेशन</p>
 </header>
@@ -57,32 +59,35 @@ footer{text-align:center;padding:25px;background:#160b25;border-top:2px solid va
 <div class="hero" id="home">
 <h1>आपके हर समारोह को बनाएं यादगार!</h1>
 <p>शादी, पार्टी और हर खास मौके के लिए शानदार टेंट, स्टेज, लाइटिंग और डेकोरेशन।</p>
-<a class="btn" href="#booking">अभी बुकिंग करें</a>
-<a class="btn dark" href="tel:+916307689645">Call Now</a>
+<a class="btn" href="#booking">📅 अभी बुकिंग करें</a>
+<a class="btn dark" href="tel:+916307689645">☎ Call Now</a>
 </div>
 
 <section id="services">
-<h2 class="heading">हमारी सेवाएँ</h2>
+<h2 class="heading">👑 हमारी सेवाएँ</h2>
 <div class="cards">
-<div class="card"><div class="emoji">⛺</div><h3>टेंट व्यवस्था</h3><p>शादी और समारोह के लिए टेंट।</p></div>
-<div class="card"><div class="emoji">✨</div><h3>स्टेज डेकोरेशन</h3><p>खूबसूरत स्टेज और शानदार सजावट।</p></div>
-<div class="card"><div class="emoji">💡</div><h3>लाइटिंग</h3><p>रोशनी और सजावट की व्यवस्था।</p></div>
-<div class="card"><div class="emoji">🪑</div><h3>कुर्सी और टेबल</h3><p>मेहमानों के लिए कुर्सी और टेबल।</p></div>
+<div class="card"><div class="emoji">⛺</div><h3>टेंट व्यवस्था</h3><p>शादी और समारोह के लिए शानदार टेंट।</p></div>
+<div class="card"><div class="emoji">✨</div><h3>स्टेज डेकोरेशन</h3><p>रॉयल स्टेज और शानदार सजावट।</p></div>
+<div class="card"><div class="emoji">💡</div><h3>लाइटिंग</h3><p>शानदार लाइट और रोशनी।</p></div>
+<div class="card"><div class="emoji">🪑</div><h3>कुर्सी और टेबल</h3><p>मेहमानों के लिए बैठने की व्यवस्था।</p></div>
+<div class="card"><div class="emoji">🌹</div><h3>फूल डेकोरेशन</h3><p>फूलों से खूबसूरत सजावट।</p></div>
+<div class="card"><div class="emoji">🎊</div><h3>पार्टी डेकोरेशन</h3><p>जन्मदिन और अन्य पार्टियाँ।</p></div>
 </div>
 </section>
 
 <section id="gallery">
-<h2 class="heading">हमारी गैलरी</h2>
+<h2 class="heading">📸 हमारी गैलरी</h2>
 <div class="cards">
-<div class="gallery">🏰<br>Royal Wedding Stage</div>
-<div class="gallery">⛺<br>Beautiful Tent Setup</div>
-<div class="gallery">💡<br>Lighting Decoration</div>
+<div class="gallery">🏰<br><br>Royal Wedding Stage</div>
+<div class="gallery">⛺<br><br>Beautiful Tent Setup</div>
+<div class="gallery">💡<br><br>Lighting Decoration</div>
+<div class="gallery">🌹<br><br>Flower Decoration</div>
 </div>
-<p class="note">असली तस्वीरें बाद में इस गैलरी में जोड़ी जा सकती हैं।</p>
+<p class="note">बाद में अपनी असली तस्वीरें यहाँ जोड़ सकते हैं।</p>
 </section>
 
 <section id="booking">
-<h2 class="heading">Online Booking Form</h2>
+<h2 class="heading">📅 Online Booking Form</h2>
 <form id="bookingForm">
 <div class="grid">
 <div><label>ग्राहक का नाम *</label><input id="name" required placeholder="अपना नाम"></div>
@@ -93,39 +98,48 @@ footer{text-align:center;padding:25px;background:#160b25;border-top:2px solid va
 <option>शादी</option><option>रिसेप्शन</option><option>जन्मदिन</option><option>पार्टी</option><option>अन्य</option>
 </select></div>
 <div><label>कार्यक्रम की तारीख *</label><input id="date" type="date" required></div>
-<div class="full"><label>कार्यक्रम का पता *</label><textarea id="address" rows="2" required placeholder="पूरा पता"></textarea></div>
+<div class="full"><label>कार्यक्रम का पता *</label><textarea id="address" required rows="2" placeholder="पूरा पता"></textarea></div>
 <div><label>टेंट की संख्या</label><input id="tent" type="number" min="0" value="0"></div>
 <div><label>कुर्सियों की संख्या</label><input id="chairs" type="number" min="0" value="0"></div>
 <div><label>टेबल की संख्या</label><input id="tables" type="number" min="0" value="0"></div>
 <div><label>लाइट की संख्या</label><input id="lights" type="number" min="0" value="0"></div>
-<div class="full"><label>अनुमानित बजट (₹)</label><input id="amount" type="number" min="0" placeholder="बजट"></div>
+<div class="full"><label>अनुमानित बजट ₹</label><input id="amount" type="number" min="0" placeholder="बजट"></div>
+<div class="full"><label>अतिरिक्त जानकारी</label><textarea id="details" rows="2" placeholder="दूसरी जरूरत"></textarea></div>
 </div>
 <button class="btn" type="submit" style="width:100%">WhatsApp पर Booking भेजें</button>
-<p class="note">WhatsApp खुलेगा। ग्राहक को Send दबाना होगा।</p>
+<p class="note">WhatsApp खुलेगा। बुकिंग भेजने के लिए Send दबाएँ।</p>
 </form>
 </section>
 
 <section id="contact">
-<h2 class="heading">Contact Us</h2>
+<h2 class="heading">📞 Contact Us</h2>
 <div class="card">
 <h3>NAJIYA ROYAL TENT HOUSE</h3>
 <p>बुकिंग और जानकारी के लिए संपर्क करें।</p>
-<p style="color:var(--gold);font-size:21px">+91 6307689645</p>
+<p style="color:var(--gold);font-size:23px">+91 6307689645</p>
 <a class="btn" href="tel:+916307689645">Call Now</a>
-<a class="btn dark" href="https://wa.me/916307689645" target="_blank" rel="noopener">WhatsApp</a>
+<a class="btn dark" href="https://wa.me/916307689645">WhatsApp</a>
 </div>
 </section>
 
-<section>
-<h2 class="heading">Admin Panel</h2>
+<section id="admin-login">
+<h2 class="heading">🔐 Admin Panel</h2>
 <div class="card">
 <p>वेबसाइट संचालक के लिए</p>
-<button class="btn dark" type="button" onclick="adminLogin()">Admin Login</button>
+<button class="btn dark" onclick="adminLogin()">Admin Login</button>
 </div>
 <div id="admin">
 <div class="card">
-<h3>Admin Dashboard</h3>
+<h2 style="color:var(--gold)">Admin Dashboard</h2>
+<div class="stats">
+<div class="stat">कुल बुकिंग<strong id="total">0</strong></div>
+<div class="stat">नई बुकिंग<strong id="pending">0</strong></div>
+<div class="stat">स्वीकार<strong id="accepted">0</strong></div>
+</div>
+<input id="search" placeholder="बुकिंग खोजें..." oninput="loadBookings()">
+<br><br>
 <button class="btn dark" onclick="loadBookings()">Refresh</button>
+<button class="btn dark" onclick="exportBookings()">Download CSV</button>
 <button class="btn dark" onclick="logout()">Logout</button>
 <div id="bookingList"></div>
 </div>
@@ -133,18 +147,18 @@ footer{text-align:center;padding:25px;background:#160b25;border-top:2px solid va
 </section>
 
 <footer>
-<strong style="color:var(--gold)">NAJIYA ROYAL TENT HOUSE</strong><br>
+<strong style="color:var(--gold)">👑 NAJIYA ROYAL TENT HOUSE</strong><br>
 आपके समारोह की शान, हमारी पहचान!<br>
 Call / WhatsApp: +91 6307689645<br>
-© 2026 Najiya Royal Tent House
+© 2026 NAJIYA ROYAL TENT HOUSE
 </footer>
 
 <script>
 const WHATSAPP_NUMBER="916307689645";
 const ADMIN_PASSWORD="ChangeThis123";
 
-const dateInput=document.getElementById("date");
-dateInput.min=new Date().toISOString().split("T")[0];
+const $=id=>document.getElementById(id);
+$("date").min=new Date().toISOString().split("T")[0];
 
 function getBookings(){
 try{return JSON.parse(localStorage.getItem("najiyaBookings")||"[]")}
@@ -154,21 +168,22 @@ function saveBookings(data){
 localStorage.setItem("najiyaBookings",JSON.stringify(data));
 }
 
-document.getElementById("bookingForm").addEventListener("submit",function(e){
+$("bookingForm").addEventListener("submit",function(e){
 e.preventDefault();
 
 const b={
 id:Date.now(),
-name:document.getElementById("name").value.trim(),
-phone:document.getElementById("phone").value.trim(),
-event:document.getElementById("event").value,
-date:document.getElementById("date").value,
-address:document.getElementById("address").value.trim(),
-tent:document.getElementById("tent").value,
-chairs:document.getElementById("chairs").value,
-tables:document.getElementById("tables").value,
-lights:document.getElementById("lights").value,
-amount:document.getElementById("amount").value,
+name:$("name").value.trim(),
+phone:$("phone").value.trim(),
+event:$("event").value,
+date:$("date").value,
+address:$("address").value.trim(),
+tent:$("tent").value,
+chairs:$("chairs").value,
+tables:$("tables").value,
+lights:$("lights").value,
+amount:$("amount").value,
+details:$("details").value.trim(),
 status:"नई बुकिंग"
 };
 
@@ -187,34 +202,40 @@ const message=`*NAJIYA ROYAL TENT HOUSE - BOOKING REQUEST*
 टेबल: ${b.tables}
 लाइट: ${b.lights}
 बजट: ₹${b.amount||"नहीं बताया"}
+अतिरिक्त जानकारी: ${b.details||"नहीं"}
 
 कृपया बुकिंग की पुष्टि करें।`;
 
-const url="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message);
-window.location.href=url;
+window.location.href="https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message);
 });
 
 function adminLogin(){
 const password=prompt("Admin Password डालें:");
 if(password===null)return;
 if(password===ADMIN_PASSWORD){
-document.getElementById("admin").style.display="block";
+$("admin").style.display="block";
 loadBookings();
-document.getElementById("admin").scrollIntoView({behavior:"smooth"});
-}else{
-alert("गलत Password!");
-}
+$("admin").scrollIntoView({behavior:"smooth"});
+}else alert("गलत Password!");
 }
 
 function loadBookings(){
-const list=document.getElementById("bookingList");
+const list=$("bookingList");
 const data=getBookings();
+$("total").textContent=data.length;
+$("pending").textContent=data.filter(b=>b.status==="नई बुकिंग").length;
+$("accepted").textContent=data.filter(b=>b.status==="स्वीकार की गई").length;
 list.innerHTML="";
-if(data.length===0){
-list.textContent="अभी कोई बुकिंग नहीं है।";
+
+const q=$("search").value.toLowerCase();
+const filtered=data.filter(b=>(b.name+" "+b.phone+" "+b.event).toLowerCase().includes(q));
+
+if(!filtered.length){
+list.textContent="कोई बुकिंग नहीं मिली।";
 return;
 }
-data.forEach(b=>{
+
+filtered.forEach(b=>{
 const item=document.createElement("div");
 item.className="booking";
 const title=document.createElement("h3");
@@ -229,6 +250,7 @@ item.appendChild(title);
 "टेंट: "+b.tent+" | कुर्सियाँ: "+b.chairs,
 "टेबल: "+b.tables+" | लाइट: "+b.lights,
 "बजट: ₹"+(b.amount||"नहीं बताया"),
+"अतिरिक्त: "+(b.details||"नहीं"),
 "स्थिति: "+b.status
 ].forEach(t=>{
 const p=document.createElement("p");
@@ -258,20 +280,34 @@ list.appendChild(item);
 
 function updateStatus(id,status){
 const data=getBookings();
-const booking=data.find(x=>x.id===id);
-if(booking)booking.status=status;
+const b=data.find(x=>x.id===id);
+if(b)b.status=status;
 saveBookings(data);
 loadBookings();
 }
 
 function deleteBooking(id){
 if(!confirm("क्या यह बुकिंग हटानी है?"))return;
-saveBookings(getBookings().filter(x=>x.id!==id));
+saveBookings(getBookings().filter(b=>b.id!==id));
 loadBookings();
 }
 
+function exportBookings(){
+const data=getBookings();
+if(!data.length){alert("कोई बुकिंग नहीं है");return}
+const keys=["name","phone","event","date","address","tent","chairs","tables","lights","amount","details","status"];
+const csv=[keys.join(","),...data.map(b=>keys.map(k=>'"'+String(b[k]||"").replace(/"/g,'""')+'"').join(","))].join("\n");
+const blob=new Blob(["\uFEFF"+csv],{type:"text/csv;charset=utf-8"});
+const url=URL.createObjectURL(blob);
+const a=document.createElement("a");
+a.href=url;
+a.download="najiya-bookings.csv";
+a.click();
+URL.revokeObjectURL(url);
+}
+
 function logout(){
-document.getElementById("admin").style.display="none";
+$("admin").style.display="none";
 }
 </script>
 </body>
